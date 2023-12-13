@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Parallel Suite All" verbose="1">
+
+    <test name="Regression Test Parallel 1" parallel="classes">
+   <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.dieutester.testcases.AddNewProductTest"/>
+            <class name="com.dieutester.testcases.EditProductTest"/>
+        </classes>
+    </test>
+    <test name="Regression Test Parallel 2" parallel="classes">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.dieutester.testcases.AddNewProductTest"/>
+            <class name="com.dieutester.testcases.EditProductTest"/>
+        </classes>
+    </test>
+
+</suite>
